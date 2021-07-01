@@ -13,6 +13,7 @@ public class Logger {
 		System.out.println(log.getData());
 	}
 		
-	
-	
+	public Log[] getLogs() {
+		return null;
+	}
 }
