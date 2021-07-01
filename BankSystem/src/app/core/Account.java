@@ -21,8 +21,8 @@ public class Account {
 
 	public void setBalance(float balance) {
 		this.balance = balance;
-		Log log1 = new Log(12323123, 123, "deposit", 25000);
-		System.out.println(log1.getData());
+//		Log log1 = new Log(12323123, 123, "deposit", 25000);
+//		System.out.println(log1.getData());
 
 	}
 	

@@ -8,7 +8,7 @@ public class Client {
 	private Account[] accounts = new Account[5];
 	private float commisionRate = 0;
 	private float interestRate = 0;
-	private Logger logger;
+	private Logger logger = new Logger(null);
 	
 	
 	public Client(int id, String name, float balance) {
@@ -16,7 +16,7 @@ public class Client {
 		this.id = id;
 		this.name = name;
 		this.balance = balance;
-		this.logger = new Logger(name);
+		
 	}
 
 
@@ -54,14 +54,23 @@ public class Client {
 		for (int i = 0; i < accounts.length; i++) {
 			if (accounts[i] == null) {
 				accounts[i] = account;
-				Log log2 = new Log(1231561, this.id, "account has been added",3500);
+				// log this operation
+				long timestamp = System.currentTimeMillis();
+				int clientId = this.id;
+				String description = "Add Account";
+				float amount = account.getBalance();
+										
+				Log log2 = new Log(timestamp, clientId, description,amount);
+				//2.use the logger to save/print to screen
 				logger.log(log2);
-				break;
+				return;
 			}
 		}
+		//if the array is full
+		System.out.println("Array account failed - array account full for account id " + account.getId());
 	}
 	public Account getAccount(int index) {
-		if (accounts[index] != null) {
+		if (index >=0 && index<accounts.length) {
 			return accounts[index];
 		}
 		return null;
