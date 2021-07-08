@@ -23,6 +23,16 @@ public class Test1 {
 		client.addAccount(account6);
 
 		System.out.println(client.getBalance());
-		System.out.println(client.getAccount(7));
+		System.out.println(client.getAccount(0));
+		
+		client.autoUpdateAccounts();
+//		client.removeAccount(1222);
+		client.deposit(100);
+		client.withdraw(255);
+		
+		System.out.println(client.getBalance());
+		System.out.println(client.getFortune());
+		
+		
 	}
 }

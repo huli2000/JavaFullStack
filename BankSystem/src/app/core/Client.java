@@ -1,5 +1,7 @@
 package app.core;
 
+import java.util.Iterator;
+
 public class Client {
 
 	private int id;
@@ -75,15 +77,77 @@ public class Client {
 		}
 		return null;
 	}
-	public void removeAccount (int id) {
+	public void removeAccount (int accountId) {
 		for (int i = 0; i < accounts.length; i++) {
-			if(accounts[i].getId() == id) {
-				accounts[i] = null ;
+			Account account = accounts[i];
+				if (account != null && account.getId() == accountId);
+					accounts[i] = null;
+					balance += account.getBalance();
+					
+					long timestamp = System.currentTimeMillis();
+					int clientId = this.id;
+					String description = "Remove Account";
+					float amount = account.getBalance();
+											
+					Log log3 = new Log(timestamp, clientId, description,amount);
+					//2.use the logger to save/print to screen
+					logger.log(log3);
+								
+			}
+		System.out.println("removeAccount failed " + accountId + " not found");
+		}
+
+	public void deposit(float amount) {
+		float commision = this.commisionRate*amount;
+		this.balance += amount ;
+		this.balance -= commision;
+		
+		long timestamp = System.currentTimeMillis();
+		int clientId = this.id;
+		String description = "deposit";	
+		Log log = new Log(timestamp, clientId, description,amount);
+		//2.use the logger to save/print to screen
+		logger.log(log);
+		
+	}
+	
+	public void withdraw(float amount) {
+		float commision = this.commisionRate*amount;
+		this.balance += amount ;
+		this.balance -= commision;
+		
+		Log log = new Log(System.currentTimeMillis(), this.id, "withdraw",amount);
+		logger.log(log);
+				
+		}
+	
+	public void autoUpdateAccounts() {
+		for (int i = 0; i < accounts.length; i++) {
+		if (accounts[i] != null) {
+				
+				float interest = accounts[i].getBalance()* this.interestRate;
+				accounts[i].setBalance(accounts[i].getBalance() + interest);
+				
+				Log log = new Log(System.currentTimeMillis(), this.id, "autoUpdateAccounts",interest);
+				logger.log(log);
+			}
+			
+		}
+		
+		
+	}
+	
+	public float getFortune() {
+		float fortune = getBalance();
+		for (int i = 0; i < accounts.length; i++) {
+			if (accounts[i] != null) {
+				fortune += accounts[i].getBalance();
+				
 			}
 		}
-			
-			
-		}
+		return fortune;
+		
+	}
 	
 }
 
