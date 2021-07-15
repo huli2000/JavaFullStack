@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class FlowTest2 {
 
-
 	public static int[] array3 = new int[10];
 
 	public static void main(String[] args) {
@@ -13,8 +12,8 @@ public class FlowTest2 {
 		int[] arr2 = populateArray();
 
 		Arrays.fill(array3, -1);
-		distinct(arr1,arr2);
-		distinct(arr2,arr1);
+		distinct(arr1, arr2);
+		distinct(arr2, arr1);
 
 		System.out.println(Arrays.toString(array3));
 		System.out.println("================");
@@ -43,7 +42,7 @@ public class FlowTest2 {
 		}
 	}
 
-	public static void distinct(int[] array1,int[] array2) {
+	public static void distinct(int[] array1, int[] array2) {
 		for (int i = 0; i < array1.length; i++) {
 
 			for (int y = 0; y < array2.length; y++) {
