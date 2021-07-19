@@ -1,31 +1,20 @@
 package Collections;
 
-
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Map;
-import java.util.concurrent.ArrayBlockingQueue;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class a {
-	
-	public static void main(String[] args) {
-		
-		List list = new ArrayList();
-		System.out.println(list.size());
 
-		list.add("BBB");
-		list.add("AAA");
-		list.add("GGGG");
-		list.add("AXAXA");
-		list.add("axxaxx");
-		list.add("TT");
-		
-		System.out.println(list.size());
-		System.out.println(list);
-		
-		
-				
+	public static void main(String[] args) {
+
+		Set<Integer> set = new LinkedHashSet<>();
+		while (set.size() < 10) {
+			boolean x = set.add((int) (Math.random() * 11));
+			System.out.println(x);
+		}
+
+		System.out.println(set);
+
 	}
 
 }
