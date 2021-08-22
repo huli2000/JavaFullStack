@@ -10,5 +10,11 @@ public class Teacher extends Person{
     public String getProfession() {
         return profession;
     }
+
+	@Override
+	public String toString() {
+		return "Teacher [profession=" + profession + "]";
+	}
+    
 }
 
