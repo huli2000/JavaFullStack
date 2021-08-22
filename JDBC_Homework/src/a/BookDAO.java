@@ -6,16 +6,16 @@ public class BookDAO {
 
 		public static void main(String[] args) {
 			
-			Book book = new Book();
+			Book book = new Book("101","Harry Potter","JRoling",42.20, Language.JAPANESE, Date.valueOf("1999-02-12"), 765);
 		
 			createBookDb();
-			addBook();
+			
 			
 			
 		
 		}
 
-		private static void addBook() {
+		private static void createBookDb() {
 			
 			String url = "jdbc:mysql://127.0.0.1:3306/db1";
 			String user = "root";
@@ -28,18 +28,22 @@ public class BookDAO {
 				sql += "price FLOAT, ";
 				sql += "pages INT, ";
 				sql += "published Date,";
-				sql += "language VARCHAR(50),";
+				sql += "language VARCHAR(50))";
 				System.out.println(sql);
+				Statement stmt = con.createStatement();
+				stmt.executeUpdate(sql);
 					
 
 			
-			} catch (Exception e) {
+			} catch (SQLException e) {
+				e.printStackTrace();
+				System.out.println("cannot connect");
 				
 			}
 		}
 
-		private static void createBookDb() {
+		
 			
 		}
-}
+
 
