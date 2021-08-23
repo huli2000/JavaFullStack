@@ -19,6 +19,10 @@ package a;
 		
 		Car car3 = Car.createCar();
 		System.out.println(car3.number);
+		
+		int totalKm = car2.drive(50, 200);
+		totalKm = car2.drive(120, 400);
+		System.out.println("car total km is " + totalKm);
 
 	}
 
