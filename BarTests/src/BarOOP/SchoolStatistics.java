@@ -1,5 +1,7 @@
 package BarOOP;
 
+import java.util.Arrays;
+
 public class SchoolStatistics {
     public static void main(String[] args) {
         //Create school with classes,teacher and students
@@ -132,6 +134,7 @@ public class SchoolStatistics {
             teachers[i] = new Teacher("Teacher" + i,
                     Utilities.getRandomNum(20, 120), Utilities.getRandomProfession());
         }
+        System.out.println(Arrays.toString(teachers));
         return teachers;
     }
 }
