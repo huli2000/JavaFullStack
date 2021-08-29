@@ -2,11 +2,11 @@ package c;
 
 public class Point implements Navigator {
 
-	private int x;
-	private int y;
+	protected int x;
+	protected int y;
 
 	public Point() {
-		super();
+	
 	}
 
 	public Point(int x, int y) {
