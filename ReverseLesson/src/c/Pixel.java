@@ -11,7 +11,7 @@ public class Pixel extends Point {
 
 	@Override
 	public String toString() {
-		return "Pixel [color=" + color +" ,x=" + x + " ,y="+ y]";
+		return "Pixel [color=" + color +" ,x=" + x + " ,y=" + y]";"
 	}
 
 	

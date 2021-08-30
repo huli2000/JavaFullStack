@@ -2,7 +2,9 @@ package c;
 
 public abstract class Vehicle implements Navigator{
 
-		private int number;
+		protected int number;
+		protected int point;
+		
 
 		public Vehicle(int number) {
 			super();
