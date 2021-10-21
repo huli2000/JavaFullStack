@@ -11,7 +11,11 @@ public class Pixel extends Point {
 
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		return "Pixel [color=" + color +" ,x=" + x + " ,y=" + y]";"
+=======
+		return "Pixel [color=" + color + ", x=" + x + ", y=" + y + "]";
+>>>>>>> branch 'master' of https://github.com/huli2000/javafullstack.git
 	}
 
 	

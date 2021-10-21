@@ -6,7 +6,7 @@ public class Point implements Navigator {
 	protected int y;
 
 	public Point() {
-		super();
+	
 	}
 
 	public Point(int x, int y) {
