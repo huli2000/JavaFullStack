@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<products xmlns="http://www.example.org/products"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/products products.xsd">
+	<product>
+		<id>101</id>
+		<name>milk</name>
+		<price>25</price>
+	</product>
+	<product>
+		<id>102</id>
+		<name>bread</name>
+		<price>30</price>
+	</product>
+	<product>
+		<id>103</id>
+		<name>TV</name>
+		<price>99</price>
+	</product>
+
+</products>
