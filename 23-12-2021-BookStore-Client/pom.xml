@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.7</version>
+		<version>2.5.8</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.eldar</groupId>
-	<artifactId>02-12-2021-rest-template-server</artifactId>
+	<groupId>com.itamar</groupId>
+	<artifactId>23-12-2021-BookStore-Client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>02-12-2021-rest-template-server</name>
-	<description>Demo project for Spring Boot</description>
+	<name>23-12-2021-BookStore-Client</name>
+	<description>23-12-2021-BookStore-Client</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -23,31 +23,19 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-	<dependency>
-    <groupId>io.springfox</groupId>
-    <artifactId>springfox-swagger-ui</artifactId>
-    <version>2.9.2</version>
-</dependency>
-<dependency>
-    <groupId>io.springfox</groupId>
-    <artifactId>springfox-swagger2</artifactId>
-    <version>2.9.2</version>
-</dependency>
-
-	
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<build>
